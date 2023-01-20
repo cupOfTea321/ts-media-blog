@@ -1,6 +1,11 @@
 .mainRoot{
-    background-color: #e7f3ff;
+    /*background-color: #e7f3ff;*/
+    /*height: 100%;*/
+
+    position: absolute;
+    width: 100%;
     height: 100%;
+    background-color: #e7f3ff;
 }
 
 .appMain{
@@ -8,11 +13,11 @@
     margin-left: 45px;
     margin-right: 45px;
     display: grid;
-
+    /*height: 1000px;*/
     grid-template-areas:
-  "header header"
-  "main main"
-  "footer footer ";
+  "header header header"
+  "main main main"
+  "footer footer footer ";
 }
 /*HEADER*/
 
@@ -52,8 +57,7 @@ header .logIn a{
 
 .inputMail{
     border: none;
-    /*color: white;*/
-    /*background-color: #5b5ab8;*/
+
     padding: 10px;
     border-radius: 5px;
 }

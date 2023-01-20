@@ -1,0 +1,10 @@
+/*COMMON*/
+.buttonUse{
+    border: none;
+    color: white;
+    background-color: #5b5ab8;
+
+    padding: 10px;
+    border-radius: 5px;
+    cursor: pointer;
+}

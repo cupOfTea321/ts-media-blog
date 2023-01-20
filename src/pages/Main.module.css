@@ -4,13 +4,16 @@ main{
     grid-area: main;
     /*background-color: bisque;*/
     display: flex;
-    height: 1000px;
     justify-content: space-between;
+}
+.mainPage{
+    height: 700px;
+
 }
 main div{
     flex: 1;
 }
-main .right-side{
+main .rightSide{
 
     background-size: contain;
     background-repeat: no-repeat;
@@ -19,24 +22,16 @@ main .right-side{
     margin-right: -30%;
 
 }
-main .left-side {
+main .leftSide {
     padding-top: 10%;
 }
-.left-side-msg p{
+.leftSideMsg p{
     color:#6a6691;
 }
-.left-side-msg h2{
+.leftSideMsg h2{
     color:#fa676d;
 }
-.left-side-msg h2 span{
+.leftSideMsg h2 span{
     color:#2d2c62;
 }
 
-/*COMMON*/
-.buttonUse{
-    border: none;
-    color: white;
-    background-color: #5b5ab8;
-    padding: 10px;
-    border-radius: 5px;
-}

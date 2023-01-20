@@ -1,0 +1,35 @@
+.blogPage{
+    /*display: flex;*/
+    /*justify-content: center;*/
+    width: 100%;
+    margin-left: 30%;
+
+}
+.blogInput{
+    border: 3px solid white;
+    border-radius: 5px;
+    padding: 10px;
+    width: 50%;
+    margin-right: 10px;
+}
+.postsDiv{
+    margin: 5px;
+    margin-top: 20px;
+    width: 60%;
+    font-size: 18px;
+}
+.postItemDiv div{
+    margin-bottom: 10px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    border: 2px solid #5b5ab8;
+    border-radius: 5px;
+    padding: 3px;
+    background-color: rgba(255,255,255,1);
+
+}
+.postsDiv a{
+    color: black;
+    text-decoration: none;
+}
