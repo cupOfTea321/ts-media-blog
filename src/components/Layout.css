@@ -1,0 +1,61 @@
+.mainRoot{
+    background-color: #e7f3ff;
+    height: 100%;
+}
+
+.appMain{
+    /*margin: 0 auto;*/
+    margin-left: 45px;
+    margin-right: 45px;
+    display: grid;
+
+    grid-template-areas:
+  "header header"
+  "main main"
+  "footer footer ";
+}
+/*HEADER*/
+
+header{
+    grid-area: header;
+    background-color: #e7f3ff;
+    display: flex;
+    align-items: center;
+}
+header .logo{
+    flex:1;
+}
+header h1 {
+    /*margin-top: 25px;*/
+}
+header nav{
+    flex:3;
+    /*margin-top: 35px;*/
+    margin-left: 100px;
+}
+header nav a{
+    margin-right: 15px;
+    text-decoration: none;
+    color: black;
+}
+header .logIn{
+    flex:1;
+    /*margin-top: 25px;*/
+}
+header .logIn a{
+    margin-right: 15px;
+    text-decoration: none;
+    color: black;
+}
+
+
+
+.inputMail{
+    border: none;
+    /*color: white;*/
+    /*background-color: #5b5ab8;*/
+    padding: 10px;
+    border-radius: 5px;
+}
+
+

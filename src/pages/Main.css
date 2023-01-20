@@ -1,0 +1,42 @@
+/*MAIN*/
+main{
+    margin-top: 3%;
+    grid-area: main;
+    /*background-color: bisque;*/
+    display: flex;
+    height: 1000px;
+    justify-content: space-between;
+}
+main div{
+    flex: 1;
+}
+main .right-side{
+
+    background-size: contain;
+    background-repeat: no-repeat;
+    background-image: url("./../../img/BASEwithout.png");
+    width: 800px;
+    margin-right: -30%;
+
+}
+main .left-side {
+    padding-top: 10%;
+}
+.left-side-msg p{
+    color:#6a6691;
+}
+.left-side-msg h2{
+    color:#fa676d;
+}
+.left-side-msg h2 span{
+    color:#2d2c62;
+}
+
+/*COMMON*/
+.buttonUse{
+    border: none;
+    color: white;
+    background-color: #5b5ab8;
+    padding: 10px;
+    border-radius: 5px;
+}
