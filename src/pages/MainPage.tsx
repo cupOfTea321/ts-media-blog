@@ -12,7 +12,7 @@ const MainPage: React.FC = () => {
                 </div>
                 <div className="forms">
                     <input className="inputMail" placeholder="Email Adress" type="text" />
-                    <MyButton >Learn More</MyButton>
+                    <MyButton>Learn More</MyButton>
 
                 </div>
             </div>
