@@ -11,6 +11,7 @@ import {getPageCount} from "../utils/pages";
 import usePagination from "../hooks/usePagination";
 import Pagination from "../components/UI/pagination/Pagination";
 import Loader from "../components/UI/loader/Loader";
+import usePosts from "../hooks/usePosts";
 
 interface IPost{
     id: number
@@ -26,7 +27,8 @@ const BlogPage: React.FC = () => {
         {id: 3, title: 'Stage', body: '2 years'},
     ])
     const [visible, setVisible] = useState(false)
-
+    const [filter, setFilter] = useState({sort: '', search: ''})
+    const sortedAndSearchedPosts = usePosts(posts, filter.sort, filter.search)
     const [totalPages, setTotalPages] = useState(0)
     const [limit, setLimit] = useState(10)
     const [page, setPage] = useState(1)
@@ -74,12 +76,12 @@ const BlogPage: React.FC = () => {
                 </MyModal>
 
                 <hr style={{margin: '15px 0', width: '60%'}}/>
-                <PostFilter/>
+                <PostFilter filter={filter} setFilter={setFilter}/>
 
                 {postError && <>We have a problem: {postError}</>}
                 { isPostLoading
                     ? <Loader/>
-                    : <PostList removePost={removePost} posts={posts} setPosts={setPosts}/>
+                    : <PostList removePost={removePost} posts={sortedAndSearchedPosts} setPosts={setPosts}/>
                 }
                 <Pagination page={page} changePage={changePage} pagesArr={pagesArr}/>
             </div>

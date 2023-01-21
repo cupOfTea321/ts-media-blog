@@ -10,7 +10,7 @@ interface PostItemProps{
 }
 const PostItem: React.FC<PostItemProps> = ({post, index, removePost}) => {
     return (
-        <div className={'postItemDiv'}>
+        <div className={'postItemDiv post'}>
             <div>
                 <strong>
                     <Link to={`/blog/${index}`}>{ index + ' ' + post.title}</Link>
