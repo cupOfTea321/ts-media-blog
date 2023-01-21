@@ -1,16 +1,23 @@
-import React, {useState} from 'react';
+import React, {useEffect, useState} from 'react';
 import PostFilter from "../components/PostFilter";
 import  '../components/Post.css'
 import PostList from "../components/PostList";
 import PostForm from "../components/PostForm";
 import MyModal from "../components/UI/modal/MyModal";
 import MyButton from "../components/UI/button/MyButton";
+import {useFetching} from "../hooks/useFetching";
+import BlogService from "../API/BlogService";
+import {getPageCount} from "../utils/pages";
+import usePagination from "../hooks/usePagination";
+import Pagination from "../components/UI/pagination/Pagination";
+import Loader from "../components/UI/loader/Loader";
 
 interface IPost{
     id: number
     title: string
     body: string
 }
+
 const BlogPage: React.FC = () => {
 
     const [posts, setPosts] = useState([
@@ -19,6 +26,21 @@ const BlogPage: React.FC = () => {
         {id: 3, title: 'Stage', body: '2 years'},
     ])
     const [visible, setVisible] = useState(false)
+
+    const [totalPages, setTotalPages] = useState(0)
+    const [limit, setLimit] = useState(5)
+    const [page, setPage] = useState(1)
+    const [fetchPosts, isPostLoading, postError] = useFetching(async () => {
+        const response = await BlogService.getAll(limit, page)
+        setPosts(response.data)
+        const totalCount =response.headers['x-total-count']
+        setTotalPages(getPageCount(totalCount, limit))
+    })
+    let pagesArr = usePagination(totalPages)
+    const changePage = (page: number) => {
+        setPage(page)
+        // fetchPosts(page, limit)
+    }
     const addPost = (post: any, setPost: Function) => {
         let newPost = {
             id: Date.now(),
@@ -33,6 +55,14 @@ const BlogPage: React.FC = () => {
         setPosts(posts.filter(post => post.id !== id));
 
     }
+    useEffect(() => {
+
+        // @ts-ignore
+        fetchPosts()
+
+        // fetchPosts:Function ();
+
+    }, [page])
     return (
         <>
             <div className={'blogPage'}>
@@ -45,8 +75,13 @@ const BlogPage: React.FC = () => {
 
                 <hr style={{margin: '15px 0', width: '60%'}}/>
                 <PostFilter/>
-                <PostList removePost={removePost} posts={posts} setPosts={setPosts}/>
 
+                {postError && <>We have a problem: {postError}</>}
+                { isPostLoading
+                    ? <Loader/>
+                    : <PostList removePost={removePost} posts={posts} setPosts={setPosts}/>
+                }
+                <Pagination page={page} changePage={changePage} pagesArr={pagesArr}/>
             </div>
         </>
 
