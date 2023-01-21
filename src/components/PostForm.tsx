@@ -3,8 +3,9 @@ import MyButton from "./UI/button/MyButton";
 
 interface PostFormProps{
     addPost: Function
+    setVisible: Function
 }
-const PostForm: React.FC<PostFormProps> = ({addPost}) => {
+const PostForm: React.FC<PostFormProps> = ({addPost, setVisible}) => {
     const [post, setPost] = useState({title: '', body: ''})
     const titleHandler = (event: React.ChangeEvent<HTMLInputElement>) => {
             setPost({...post, title: event.target.value})
@@ -13,8 +14,12 @@ const PostForm: React.FC<PostFormProps> = ({addPost}) => {
         setPost({...post, body: event.target.value})
     }
 
+    const addHandler = () => {
+        addPost(post, setPost)
+        setVisible(false)
+    }
     return (
-        <div>
+        <div >
             <input className={'blogInput'} style={{marginBottom: 10}}
                    type="text" placeholder={"Post title..."}
                     value={post.title} onChange={titleHandler}
@@ -23,8 +28,8 @@ const PostForm: React.FC<PostFormProps> = ({addPost}) => {
                    placeholder={"Post body..."}
                     value={post.body} onChange={bodyHandler}
             />
-            <MyButton  onClick={() => addPost(post, setPost)}>Add Post</MyButton>
-            <hr style={{margin: '15px 0', width: '60%'}}/>
+            <MyButton  onClick={addHandler}>Add Post</MyButton>
+
         </div>
     );
 };

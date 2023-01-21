@@ -6,14 +6,15 @@
 
 }
 .blogInput{
-    border: 3px solid white;
+    border: 2px solid #5b5ab8;
+    font-size: 20px;
     border-radius: 5px;
     padding: 10px;
-    width: 50%;
+    width: 100%;
     margin-right: 10px;
+    margin-bottom: 10px;
 }
 .postsDiv{
-    margin: 5px;
     margin-top: 20px;
     width: 60%;
     font-size: 18px;

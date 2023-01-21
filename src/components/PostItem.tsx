@@ -6,8 +6,9 @@ import MyButton from "./UI/button/MyButton";
 interface PostItemProps{
     post: any
     index: number
+    removePost: Function
 }
-const PostItem: React.FC<PostItemProps> = ({post, index}) => {
+const PostItem: React.FC<PostItemProps> = ({post, index, removePost}) => {
     return (
         <div className={'postItemDiv'}>
             <div>
@@ -16,7 +17,7 @@ const PostItem: React.FC<PostItemProps> = ({post, index}) => {
                 </strong>
 
                 <p>{post.body}</p>
-                <MyButton>Удалить</MyButton>
+                <MyButton onClick={() => removePost(post.id)}>Удалить</MyButton>
             </div>
 
         </div>

@@ -3,6 +3,8 @@ import PostFilter from "../components/PostFilter";
 import  '../components/Post.css'
 import PostList from "../components/PostList";
 import PostForm from "../components/PostForm";
+import MyModal from "../components/UI/modal/MyModal";
+import MyButton from "../components/UI/button/MyButton";
 
 interface IPost{
     id: number
@@ -16,7 +18,7 @@ const BlogPage: React.FC = () => {
         {id: 2, title: 'My skills', body: 'Using html, css, js, react, redux'},
         {id: 3, title: 'Stage', body: '2 years'},
     ])
-
+    const [visible, setVisible] = useState(false)
     const addPost = (post: any, setPost: Function) => {
         let newPost = {
             id: Date.now(),
@@ -27,7 +29,8 @@ const BlogPage: React.FC = () => {
         setPost({title: '', body: ''})
 
     }
-    const removePost = () => {
+    const removePost = (id: number) => {
+        setPosts(posts.filter(post => post.id !== id));
 
     }
     return (
@@ -35,10 +38,14 @@ const BlogPage: React.FC = () => {
             <div className={'blogPage'}>
 
 
-                <PostForm addPost={addPost}/>
+                <MyButton onClick={() => setVisible(true)}>Add Post</MyButton>
+                <MyModal visible={visible} setVisible={setVisible}>
+                <PostForm addPost={addPost} setVisible={setVisible} />
+                </MyModal>
 
+                <hr style={{margin: '15px 0', width: '60%'}}/>
                 <PostFilter/>
-                <PostList posts={posts} setPosts={setPosts}/>
+                <PostList removePost={removePost} posts={posts} setPosts={setPosts}/>
 
             </div>
         </>

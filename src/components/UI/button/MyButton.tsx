@@ -5,10 +5,11 @@ interface IButton extends ButtonHTMLAttributes<HTMLButtonElement>{
     props?: PropsWithChildren
     children?: React.ReactNode
     onClick?: React.MouseEventHandler<HTMLButtonElement>
+    style?: any
 }
-const MyButton: React.FC<IButton> = ({props, children, onClick}) => {
+const MyButton: React.FC<IButton> = ({props, children, onClick, style}) => {
     return (
-        <button onClick={onClick} className={cl.buttonUse} {...props}>
+        <button style={style} onClick={onClick} className={cl.buttonUse} {...props}>
             {children}
         </button>
     );

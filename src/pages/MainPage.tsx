@@ -6,7 +6,7 @@ const MainPage: React.FC = () => {
         <main className={st.mainPage}>
             <div className={st.leftSide}>
                 <div className={st.leftSideMsg}>
-                    <h2><span>Grow your media with</span> FlexMess!</h2>
+                    <h2><span>Grow your media with</span> BlogIn!</h2>
                     <p>This organization is non-profit.</p>
                     <p>All data is protected!</p>
                 </div>

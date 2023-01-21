@@ -3,10 +3,14 @@ import './Post.css'
 import MyButton from "./UI/button/MyButton";
 const PostFilter: React.FC = () => {
     return (
-        <div>
+        <div style={{
+            // display: 'flex',
+            // alignItems: 'center',
+            // alignContent: 'center'
+        }}>
 
-            <input className={'blogInput'} type="text" placeholder={"Search..."}/>
-            <MyButton  >Search...</MyButton>
+            <input style={{width: '50%'}} className={'blogInput'} type="text" placeholder={"Search..."}/>
+            <MyButton  style={{paddingTop: 17, paddingBottom: 14}}>Search...</MyButton>
         </div>
     );
 };

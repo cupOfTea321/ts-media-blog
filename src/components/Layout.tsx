@@ -7,7 +7,7 @@ const Layout = () => {
         <div className={'mainRoot'}>
             <div className={'appMain'}>
                 <header>
-                    <h1>FlexMess</h1>
+                    <h1>BlogIn</h1>
                     <nav className={'nav'}>
                         <NavLink to={'/'} >Main page</NavLink>
                         <NavLink to={'/blog'} >Blog page</NavLink>
