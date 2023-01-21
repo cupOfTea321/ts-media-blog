@@ -7,8 +7,9 @@
     background-color: white;
 }
 .page_current{
-    border: 3px solid black;
+    border: 3px solid #fa676d;
     margin: 10px 3px;
     font-size: 26px;
     border-radius: 10px;
+    background-color: white;
 }

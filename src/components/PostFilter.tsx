@@ -36,7 +36,7 @@ const PostFilter: React.FC<IFilter> = ({filter, setFilter}) => {
                 {value: 'title', name: 'По названию'},
                 {value: 'body', name: 'По содержанию'},
             ]}/>
-            <MyButton  style={{paddingTop: 18, paddingBottom: 14, width: 120 }}>Search...</MyButton>
+            {/*<MyButton  style={{paddingTop: 18, paddingBottom: 14, width: 120 }}>Search...</MyButton>*/}
         </div>
     );
 };

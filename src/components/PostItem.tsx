@@ -19,7 +19,7 @@ const PostItem: React.FC<PostItemProps> = ({post, index, removePost}) => {
                 <p>{post.body}</p>
             </div>
 
-                <MyButton onClick={() => removePost(post.id)}>Удалить</MyButton>
+                <MyButton style={{ backgroundColor: '#fa676d'}} onClick={() => removePost(post.id)}>Удалить</MyButton>
 
 
 
