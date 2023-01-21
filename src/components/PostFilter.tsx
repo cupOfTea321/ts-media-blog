@@ -10,7 +10,7 @@ const PostFilter: React.FC = () => {
         }}>
 
             <input style={{width: '50%'}} className={'blogInput'} type="text" placeholder={"Search..."}/>
-            <MyButton  style={{paddingTop: 17, paddingBottom: 14}}>Search...</MyButton>
+            <MyButton  style={{paddingTop: 18, paddingBottom: 14, width: 120 }}>Search...</MyButton>
         </div>
     );
 };

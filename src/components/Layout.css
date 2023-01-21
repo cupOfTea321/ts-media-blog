@@ -1,12 +1,17 @@
-.mainRoot{
-    /*background-color: #e7f3ff;*/
-    /*height: 100%;*/
+/*.mainRoot{*/
+/*    !*background-color: #e7f3ff;*!*/
+/*    !*height: 100%;*!*/
 
-    position: absolute;
-    width: 100%;
+/*    position: absolute;*/
+/*    width: 100%;*/
+/*    height: 100vh;*/
+/*    background-color: #e7f3ff;*/
+/*}*/
+body, html {
     height: 100%;
     background-color: #e7f3ff;
 }
+
 
 .appMain{
     /*margin: 0 auto;*/

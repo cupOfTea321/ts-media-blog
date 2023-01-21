@@ -28,7 +28,7 @@ const BlogPage: React.FC = () => {
     const [visible, setVisible] = useState(false)
 
     const [totalPages, setTotalPages] = useState(0)
-    const [limit, setLimit] = useState(5)
+    const [limit, setLimit] = useState(10)
     const [page, setPage] = useState(1)
     const [fetchPosts, isPostLoading, postError] = useFetching(async () => {
         const response = await BlogService.getAll(limit, page)

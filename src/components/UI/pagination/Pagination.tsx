@@ -1,5 +1,5 @@
 import React from 'react';
-
+import cl from './Pagination.module.css'
 interface IPagination{
     pagesArr: Array<number>
     changePage: Function
@@ -12,7 +12,7 @@ const Pagination: React.FC<IPagination> = ({pagesArr, changePage, page}) => {
                 <button
                     key={p}
                     onClick={() => changePage(p)}
-                    className={page === p ? 'page, page_current' : 'page'}>
+                    className={page === p ? `${cl.page}, ${cl.page_current}` : `${cl.page}`}>
                     {p}
                 </button>
             )}

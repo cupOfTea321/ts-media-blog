@@ -1,0 +1,14 @@
+.page{
+    border: 3px solid #5b5ab8;
+    border-radius: 10px;
+    margin: 10px 3px;
+    cursor: pointer;
+    font-size: 26px;
+    background-color: white;
+}
+.page_current{
+    border: 3px solid black;
+    margin: 10px 3px;
+    font-size: 26px;
+    border-radius: 10px;
+}

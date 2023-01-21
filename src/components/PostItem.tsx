@@ -17,8 +17,11 @@ const PostItem: React.FC<PostItemProps> = ({post, index, removePost}) => {
                 </strong>
 
                 <p>{post.body}</p>
-                <MyButton onClick={() => removePost(post.id)}>Удалить</MyButton>
             </div>
+
+                <MyButton onClick={() => removePost(post.id)}>Удалить</MyButton>
+
+
 
         </div>
     );

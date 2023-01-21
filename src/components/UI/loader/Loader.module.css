@@ -1,13 +1,15 @@
 .loader{
-    width: 100px;
-    height: 100px;
-    border-radius: 50%;
-    border: 3px dashed #0b5ed7;
+    width: 200px;
+    height: 200px;
+    border-radius: 100%;
+    border: 3px dashed #5b5ab8;
     animation: rotate 1s infinite linear;
 }
 .div_loader{
-    display: flex;
-    justify-content: center;
+    /*display: flex;*/
+    display: inline-block;
+    margin-left: 40%;
+    margin-top: 10%;
 }
 
 @keyframes rotate {
@@ -15,6 +17,6 @@
         transform: rotate(0deg) scale(1);
     }
     to{
-        transform: rotate(360deg) scale(1.4);
+        transform: rotate(360deg) scale(1.2);
     }
 }
