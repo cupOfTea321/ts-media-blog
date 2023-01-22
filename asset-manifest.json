@@ -1,0 +1,14 @@
+{
+  "files": {
+    "main.css": "/ts-media-blog/static/css/main.d6206e46.css",
+    "main.js": "/ts-media-blog/static/js/main.b6e72697.js",
+    "static/media/BASEwithout.png": "/ts-media-blog/static/media/BASEwithout.3802958d2459d3921644.png",
+    "index.html": "/ts-media-blog/index.html",
+    "main.d6206e46.css.map": "/ts-media-blog/static/css/main.d6206e46.css.map",
+    "main.b6e72697.js.map": "/ts-media-blog/static/js/main.b6e72697.js.map"
+  },
+  "entrypoints": [
+    "static/css/main.d6206e46.css",
+    "static/js/main.b6e72697.js"
+  ]
+}
