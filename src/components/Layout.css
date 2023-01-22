@@ -68,3 +68,14 @@ header .logIn a{
 }
 
 
+/*FOOTER*/
+
+footer .icon{
+    color: white;
+    background-color: #5b5ab8;
+    border: 1px #5b5ab8;
+    padding: 8px;
+    margin-right: 10px;
+    border-radius: 5px;
+    margin-top: 10px;
+}
